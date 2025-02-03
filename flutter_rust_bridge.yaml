@@ -1,0 +1,8 @@
+rust_input: crate::api,scatterbrain::api
+rust_root: rust/
+dart_output: lib/rust
+enable_lifetime: true
+stop_on_error: true
+dart_type_rename:
+  SelfBoxHack: SelfBox
+
