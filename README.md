@@ -1,92 +1,30 @@
-# scatterbrain_flutter
+# Scatterbrain flutter api
 
-A new Flutter FFI plugin project.
+This is a flutter FFI plugin for accessing a Scatterbrain router over the experimental Scatterbrain desktop api. The backend implementation of this repository is generated using [flutter_rust_bridge](https://github.com/fzyzcjy/flutter_rust_bridge)
 
-## Getting Started
+## Setup instructions
+ Due to limitations in the flutter_rust_bridge code generator, applications requiring additional rust code should fork this repository and include it as a local subdirectory of your flutter project to allow `flutter_rust_bridge_codegen` to pickup changes from your own rust codebase and this library.  
+This is not required if all business logic is in dart or if this library is imported as a FFI plugin and does not interact with types from the parent project.
 
-This project is a starting point for a Flutter
-[FFI plugin](https://flutter.dev/to/ffi-package),
-a specialized package that includes native code directly invoked with Dart FFI.
-
-## Project structure
-
-This template uses the following structure:
-
-* `src`: Contains the native source code, and a CmakeFile.txt file for building
-  that source code into a dynamic library.
-
-* `lib`: Contains the Dart code that defines the API of the plugin, and which
-  calls into the native code using `dart:ffi`.
-
-* platform folders (`android`, `ios`, `windows`, etc.): Contains the build files
-  for building and bundling the native code library with the platform application.
-
-## Building and bundling native code
-
-The `pubspec.yaml` specifies FFI plugins as follows:
-
-```yaml
-  plugin:
-    platforms:
-      some_platform:
-        ffiPlugin: true
+### Add repository as submodule
+```sh
+cargo install flutter_rust_bridge_codegen
+git submodule add https://github.com/Scatterbrain-DTN/scatterbrain-flutter.git scatterbrain
+git submodule update --init -recursive
+# if modifications were made
+cd scatterbrain && flutter_rust_bridge_codegen generate  --enable-lifetime
 ```
 
-This configuration invokes the native build for the various target platforms
-and bundles the binaries in Flutter applications using these FFI plugins.
-
-This can be combined with dartPluginClass, such as when FFI is used for the
-implementation of one platform in a federated plugin:
-
+### Add repository to pubspec.yaml
 ```yaml
-  plugin:
-    implements: some_other_plugin
-    platforms:
-      some_platform:
-        dartPluginClass: SomeClass
-        ffiPlugin: true
+dependencies:
+  flutter:
+    sdk: flutter
+  scatterbrain_flutter:
+    path: ./scatterbrain
 ```
 
-A plugin can have both FFI and method channels:
 
-```yaml
-  plugin:
-    platforms:
-      some_platform:
-        pluginClass: SomeName
-        ffiPlugin: true
-```
 
-The native build systems that are invoked by FFI (and method channel) plugins are:
 
-* For Android: Gradle, which invokes the Android NDK for native builds.
-  * See the documentation in android/build.gradle.
-* For iOS and MacOS: Xcode, via CocoaPods.
-  * See the documentation in ios/scatterbrain_flutter.podspec.
-  * See the documentation in macos/scatterbrain_flutter.podspec.
-* For Linux and Windows: CMake.
-  * See the documentation in linux/CMakeLists.txt.
-  * See the documentation in windows/CMakeLists.txt.
-
-## Binding to native code
-
-To use the native code, bindings in Dart are needed.
-To avoid writing these by hand, they are generated from the header file
-(`src/scatterbrain_flutter.h`) by `package:ffigen`.
-Regenerate the bindings by running `dart run ffigen --config ffigen.yaml`.
-
-## Invoking native code
-
-Very short-running native functions can be directly invoked from any isolate.
-For example, see `sum` in `lib/scatterbrain_flutter.dart`.
-
-Longer-running functions should be invoked on a helper isolate to avoid
-dropping frames in Flutter applications.
-For example, see `sumAsync` in `lib/scatterbrain_flutter.dart`.
-
-## Flutter help
-
-For help getting started with Flutter, view our
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
