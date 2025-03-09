@@ -9,9 +9,8 @@ class SearchState extends ChangeNotifier {
 
   SearchState({required ServiceScannerLike scanner, this.paired = false})
       : _scanner = scanner;
-
-  Future<void> startScan() async {
-    await _scanner.discoverDevices(cb: (devices) {
+  void startScan() {
+    _scanner.scanNonblock(cb: (devices) {
       this.devices = devices.toList();
       notifyListeners();
     });

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ErrorDialog extends AlertDialog {
-  const ErrorDialog({super.key});
+  final String errorText;
+  const ErrorDialog({super.key, required this.errorText});
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text('Failed to connect'),
+      title: Text('Failed to connect: $errorText'),
       actions: [
         ElevatedButton(
             onPressed: () => Navigator.of(context, rootNavigator: true).pop(),

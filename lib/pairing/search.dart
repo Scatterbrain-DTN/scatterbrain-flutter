@@ -10,14 +10,9 @@ import 'package:scatterbrain_flutter/scatterbrain/repository.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-typedef SearchContent = Widget? Function(BuildContext);
-Widget? _def(BuildContext ctx) {
-  return null;
-}
-
 class _SearchListState extends State<SearchList> {
   String error = "";
-  SearchContent inner = _def;
+  Widget? inner;
 
   Future<void> onScan() async {
     setState(() {});
@@ -44,15 +39,23 @@ class _SearchListState extends State<SearchList> {
   }
 
   void onDisconnect() {
+    print("onDisconnect");
     setState(() {
-      inner = _def;
+      inner = null;
       error = "Disconnected";
     });
   }
 
-  Widget _getScaner(BuildContext ctx) {
-    return Scaffold(
-        appBar: AppBar(title: const Text("Scanning for scatterbrain devices")),
+  Widget _getScaner() {
+    final r = Scaffold(
+        appBar: AppBar(
+          title: const Text("Scanning for scatterbrain devices"),
+          actions: [
+            ElevatedButton(
+                onPressed: () async => await widget.prefs.clear(),
+                child: const Text('Delete'))
+          ],
+        ),
         body: Column(children: [
           Text('Devices found: ${widget.scanner.devices.length}\n$error'),
           Column(
@@ -74,14 +77,16 @@ class _SearchListState extends State<SearchList> {
 
                       setState(() {
                         inner =
-                            (ctx) => widget.onPair(repository, b, onDisconnect);
+                            widget.onPair(repository, b, onDisconnect, null);
                       });
                     } else {
                       setState(() {
-                        inner = (ctx) => widget.onConnect(null, (_) {});
+                        inner = widget.onConnect(
+                            null, (_) {}, Exception("failed to connect"));
                       });
                     }
                   });
+                  print("got pairing status $pairing");
                   final p = switch (pairing) {
                     PairStatus_NotPaired(:final field0) =>
                       widget.onConnect(field0, (s) {
@@ -93,9 +98,10 @@ class _SearchListState extends State<SearchList> {
                                   config: config,
                                   currentSession: s),
                               s,
-                              onDisconnect);
+                              onDisconnect,
+                              null);
                         }
-                      }),
+                      }, null),
                     PairStatus_Paired(:final field0) => widget.onPair(
                         ScatterbrainRepository(
                             record: v,
@@ -103,39 +109,54 @@ class _SearchListState extends State<SearchList> {
                             config: config,
                             currentSession: field0),
                         field0,
-                        onDisconnect)
+                        onDisconnect,
+                        null)
                   };
                   if (p != null) {
                     widget.scanner.pair();
+                  } else {
+                    print("unpaired! for some reason");
                   }
                   setState(() {
-                    inner = (ctx) => p;
+                    inner = p;
                   });
-                } on Exception {
+                } on Exception catch (e) {
                   setState(() {
-                    inner = (ctx) => widget.onConnect(null, (_) {});
+                    inner = widget.onConnect(null, (_) {}, e);
                   });
                 }
               },
             );
           }).toList()),
         ]));
+
+    // WidgetsBinding.instance.addPostFrameCallback((_) async {
+    //   if (inner == null) {
+    //     await widget.scanner.startScan();
+    //   } else {
+    //     await widget.scanner.stopScan();
+    //   }
+    // });
+
+    return r;
   }
 
   @override
   Widget build(BuildContext context) {
-    return inner(context) ?? _getScaner(context);
+    return inner ?? _getScaner();
   }
 }
 
 typedef OnDisconnect = FutureOr<void> Function();
 
 typedef OnPair = Widget Function(
-    ScatterbrainRepository, SbSession, OnDisconnect);
+    ScatterbrainRepository, SbSession, OnDisconnect, Exception?);
+
+typedef OnConnect = Widget? Function(
+    PairingSession?, FutureOr<void> Function(SbSession?), Exception?);
 
 class SearchList extends StatefulWidget {
-  final Widget? Function(PairingSession?, FutureOr<void> Function(SbSession?))
-      onConnect;
+  final OnConnect onConnect;
   final OnPair onPair;
   final String appName;
   final SharedPreferencesAsync prefs;

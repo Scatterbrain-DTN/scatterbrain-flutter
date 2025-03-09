@@ -15,6 +15,12 @@ class MockServiceScanner implements ServiceScanner {
   }
 
   @override
+  void scanNonblock(
+      {required FutureOr<void> Function(List<HostRecord> p1) cb}) {
+    cb(records);
+  }
+
+  @override
   Future<void> stopScan() async {
     records.clear();
   }

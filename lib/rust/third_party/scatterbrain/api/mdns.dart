@@ -69,12 +69,17 @@ abstract class ServiceScanner
       RustLib.instance.api.scatterbrainApiMdnsServiceScannerNew();
 
   @override
+  void scanNonblock({required FutureOr<void> Function(List<HostRecord>) cb});
+
+  @override
   Future<void> stopScan();
 }
 
 abstract class ServiceScannerLike {
   Future<void> discoverDevices(
       {required FutureOr<void> Function(List<HostRecord>) cb});
+
+  void scanNonblock({required FutureOr<void> Function(List<HostRecord>) cb});
 
   Future<void> stopScan();
 }
