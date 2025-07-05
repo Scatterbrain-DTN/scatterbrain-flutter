@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,116 +9,54 @@ part of 'types.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ImportIdentityState {
-  UuidValue get field0 => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(UuidValue field0) initiated,
-    required TResult Function(UuidValue field0) complete,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(UuidValue field0)? initiated,
-    TResult? Function(UuidValue field0)? complete,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(UuidValue field0)? initiated,
-    TResult Function(UuidValue field0)? complete,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ImportIdentityState_Initiated value) initiated,
-    required TResult Function(ImportIdentityState_Complete value) complete,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ImportIdentityState_Initiated value)? initiated,
-    TResult? Function(ImportIdentityState_Complete value)? complete,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ImportIdentityState_Initiated value)? initiated,
-    TResult Function(ImportIdentityState_Complete value)? complete,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  UuidValue get field0;
 
   /// Create a copy of ImportIdentityState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ImportIdentityStateCopyWith<ImportIdentityState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ImportIdentityStateCopyWith<$Res> {
-  factory $ImportIdentityStateCopyWith(
-          ImportIdentityState value, $Res Function(ImportIdentityState) then) =
-      _$ImportIdentityStateCopyWithImpl<$Res, ImportIdentityState>;
-  @useResult
-  $Res call({UuidValue field0});
-}
-
-/// @nodoc
-class _$ImportIdentityStateCopyWithImpl<$Res, $Val extends ImportIdentityState>
-    implements $ImportIdentityStateCopyWith<$Res> {
-  _$ImportIdentityStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of ImportIdentityState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $ImportIdentityStateCopyWith<ImportIdentityState> get copyWith =>
+      _$ImportIdentityStateCopyWithImpl<ImportIdentityState>(
+          this as ImportIdentityState, _$identity);
+
   @override
-  $Res call({
-    Object? field0 = null,
-  }) {
-    return _then(_value.copyWith(
-      field0: null == field0
-          ? _value.field0
-          : field0 // ignore: cast_nullable_to_non_nullable
-              as UuidValue,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ImportIdentityState &&
+            (identical(other.field0, field0) || other.field0 == field0));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, field0);
+
+  @override
+  String toString() {
+    return 'ImportIdentityState(field0: $field0)';
   }
 }
 
 /// @nodoc
-abstract class _$$ImportIdentityState_InitiatedImplCopyWith<$Res>
-    implements $ImportIdentityStateCopyWith<$Res> {
-  factory _$$ImportIdentityState_InitiatedImplCopyWith(
-          _$ImportIdentityState_InitiatedImpl value,
-          $Res Function(_$ImportIdentityState_InitiatedImpl) then) =
-      __$$ImportIdentityState_InitiatedImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $ImportIdentityStateCopyWith<$Res> {
+  factory $ImportIdentityStateCopyWith(
+          ImportIdentityState value, $Res Function(ImportIdentityState) _then) =
+      _$ImportIdentityStateCopyWithImpl;
   @useResult
   $Res call({UuidValue field0});
 }
 
 /// @nodoc
-class __$$ImportIdentityState_InitiatedImplCopyWithImpl<$Res>
-    extends _$ImportIdentityStateCopyWithImpl<$Res,
-        _$ImportIdentityState_InitiatedImpl>
-    implements _$$ImportIdentityState_InitiatedImplCopyWith<$Res> {
-  __$$ImportIdentityState_InitiatedImplCopyWithImpl(
-      _$ImportIdentityState_InitiatedImpl _value,
-      $Res Function(_$ImportIdentityState_InitiatedImpl) _then)
-      : super(_value, _then);
+class _$ImportIdentityStateCopyWithImpl<$Res>
+    implements $ImportIdentityStateCopyWith<$Res> {
+  _$ImportIdentityStateCopyWithImpl(this._self, this._then);
+
+  final ImportIdentityState _self;
+  final $Res Function(ImportIdentityState) _then;
 
   /// Create a copy of ImportIdentityState
   /// with the given fields replaced by the non-null parameter values.
@@ -127,162 +65,250 @@ class __$$ImportIdentityState_InitiatedImplCopyWithImpl<$Res>
   $Res call({
     Object? field0 = null,
   }) {
-    return _then(_$ImportIdentityState_InitiatedImpl(
-      null == field0
-          ? _value.field0
+    return _then(_self.copyWith(
+      field0: null == field0
+          ? _self.field0
           : field0 // ignore: cast_nullable_to_non_nullable
               as UuidValue,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [ImportIdentityState].
+extension ImportIdentityStatePatterns on ImportIdentityState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ImportIdentityState_Initiated value)? initiated,
+    TResult Function(ImportIdentityState_Complete value)? complete,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ImportIdentityState_Initiated() when initiated != null:
+        return initiated(_that);
+      case ImportIdentityState_Complete() when complete != null:
+        return complete(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ImportIdentityState_Initiated value) initiated,
+    required TResult Function(ImportIdentityState_Complete value) complete,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ImportIdentityState_Initiated():
+        return initiated(_that);
+      case ImportIdentityState_Complete():
+        return complete(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ImportIdentityState_Initiated value)? initiated,
+    TResult? Function(ImportIdentityState_Complete value)? complete,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ImportIdentityState_Initiated() when initiated != null:
+        return initiated(_that);
+      case ImportIdentityState_Complete() when complete != null:
+        return complete(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(UuidValue field0)? initiated,
+    TResult Function(UuidValue field0)? complete,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ImportIdentityState_Initiated() when initiated != null:
+        return initiated(_that.field0);
+      case ImportIdentityState_Complete() when complete != null:
+        return complete(_that.field0);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(UuidValue field0) initiated,
+    required TResult Function(UuidValue field0) complete,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ImportIdentityState_Initiated():
+        return initiated(_that.field0);
+      case ImportIdentityState_Complete():
+        return complete(_that.field0);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(UuidValue field0)? initiated,
+    TResult? Function(UuidValue field0)? complete,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case ImportIdentityState_Initiated() when initiated != null:
+        return initiated(_that.field0);
+      case ImportIdentityState_Complete() when complete != null:
+        return complete(_that.field0);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 
-class _$ImportIdentityState_InitiatedImpl
-    extends ImportIdentityState_Initiated {
-  const _$ImportIdentityState_InitiatedImpl(this.field0) : super._();
+class ImportIdentityState_Initiated extends ImportIdentityState {
+  const ImportIdentityState_Initiated(this.field0) : super._();
 
   @override
   final UuidValue field0;
+
+  /// Create a copy of ImportIdentityState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ImportIdentityState_InitiatedCopyWith<ImportIdentityState_Initiated>
+      get copyWith => _$ImportIdentityState_InitiatedCopyWithImpl<
+          ImportIdentityState_Initiated>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is ImportIdentityState_Initiated &&
+            (identical(other.field0, field0) || other.field0 == field0));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, field0);
 
   @override
   String toString() {
     return 'ImportIdentityState.initiated(field0: $field0)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ImportIdentityState_InitiatedImpl &&
-            (identical(other.field0, field0) || other.field0 == field0));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, field0);
-
-  /// Create a copy of ImportIdentityState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ImportIdentityState_InitiatedImplCopyWith<
-          _$ImportIdentityState_InitiatedImpl>
-      get copyWith => __$$ImportIdentityState_InitiatedImplCopyWithImpl<
-          _$ImportIdentityState_InitiatedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(UuidValue field0) initiated,
-    required TResult Function(UuidValue field0) complete,
-  }) {
-    return initiated(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(UuidValue field0)? initiated,
-    TResult? Function(UuidValue field0)? complete,
-  }) {
-    return initiated?.call(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(UuidValue field0)? initiated,
-    TResult Function(UuidValue field0)? complete,
-    required TResult orElse(),
-  }) {
-    if (initiated != null) {
-      return initiated(field0);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ImportIdentityState_Initiated value) initiated,
-    required TResult Function(ImportIdentityState_Complete value) complete,
-  }) {
-    return initiated(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ImportIdentityState_Initiated value)? initiated,
-    TResult? Function(ImportIdentityState_Complete value)? complete,
-  }) {
-    return initiated?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ImportIdentityState_Initiated value)? initiated,
-    TResult Function(ImportIdentityState_Complete value)? complete,
-    required TResult orElse(),
-  }) {
-    if (initiated != null) {
-      return initiated(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ImportIdentityState_Initiated extends ImportIdentityState {
-  const factory ImportIdentityState_Initiated(final UuidValue field0) =
-      _$ImportIdentityState_InitiatedImpl;
-  const ImportIdentityState_Initiated._() : super._();
-
-  @override
-  UuidValue get field0;
-
-  /// Create a copy of ImportIdentityState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ImportIdentityState_InitiatedImplCopyWith<
-          _$ImportIdentityState_InitiatedImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ImportIdentityState_CompleteImplCopyWith<$Res>
+abstract mixin class $ImportIdentityState_InitiatedCopyWith<$Res>
     implements $ImportIdentityStateCopyWith<$Res> {
-  factory _$$ImportIdentityState_CompleteImplCopyWith(
-          _$ImportIdentityState_CompleteImpl value,
-          $Res Function(_$ImportIdentityState_CompleteImpl) then) =
-      __$$ImportIdentityState_CompleteImplCopyWithImpl<$Res>;
+  factory $ImportIdentityState_InitiatedCopyWith(
+          ImportIdentityState_Initiated value,
+          $Res Function(ImportIdentityState_Initiated) _then) =
+      _$ImportIdentityState_InitiatedCopyWithImpl;
   @override
   @useResult
   $Res call({UuidValue field0});
 }
 
 /// @nodoc
-class __$$ImportIdentityState_CompleteImplCopyWithImpl<$Res>
-    extends _$ImportIdentityStateCopyWithImpl<$Res,
-        _$ImportIdentityState_CompleteImpl>
-    implements _$$ImportIdentityState_CompleteImplCopyWith<$Res> {
-  __$$ImportIdentityState_CompleteImplCopyWithImpl(
-      _$ImportIdentityState_CompleteImpl _value,
-      $Res Function(_$ImportIdentityState_CompleteImpl) _then)
-      : super(_value, _then);
+class _$ImportIdentityState_InitiatedCopyWithImpl<$Res>
+    implements $ImportIdentityState_InitiatedCopyWith<$Res> {
+  _$ImportIdentityState_InitiatedCopyWithImpl(this._self, this._then);
+
+  final ImportIdentityState_Initiated _self;
+  final $Res Function(ImportIdentityState_Initiated) _then;
 
   /// Create a copy of ImportIdentityState
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? field0 = null,
   }) {
-    return _then(_$ImportIdentityState_CompleteImpl(
+    return _then(ImportIdentityState_Initiated(
       null == field0
-          ? _value.field0
+          ? _self.field0
           : field0 // ignore: cast_nullable_to_non_nullable
               as UuidValue,
     ));
@@ -291,114 +317,72 @@ class __$$ImportIdentityState_CompleteImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ImportIdentityState_CompleteImpl extends ImportIdentityState_Complete {
-  const _$ImportIdentityState_CompleteImpl(this.field0) : super._();
+class ImportIdentityState_Complete extends ImportIdentityState {
+  const ImportIdentityState_Complete(this.field0) : super._();
 
   @override
   final UuidValue field0;
 
+  /// Create a copy of ImportIdentityState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'ImportIdentityState.complete(field0: $field0)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $ImportIdentityState_CompleteCopyWith<ImportIdentityState_Complete>
+      get copyWith => _$ImportIdentityState_CompleteCopyWithImpl<
+          ImportIdentityState_Complete>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ImportIdentityState_CompleteImpl &&
+            other is ImportIdentityState_Complete &&
             (identical(other.field0, field0) || other.field0 == field0));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, field0);
 
+  @override
+  String toString() {
+    return 'ImportIdentityState.complete(field0: $field0)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $ImportIdentityState_CompleteCopyWith<$Res>
+    implements $ImportIdentityStateCopyWith<$Res> {
+  factory $ImportIdentityState_CompleteCopyWith(
+          ImportIdentityState_Complete value,
+          $Res Function(ImportIdentityState_Complete) _then) =
+      _$ImportIdentityState_CompleteCopyWithImpl;
+  @override
+  @useResult
+  $Res call({UuidValue field0});
+}
+
+/// @nodoc
+class _$ImportIdentityState_CompleteCopyWithImpl<$Res>
+    implements $ImportIdentityState_CompleteCopyWith<$Res> {
+  _$ImportIdentityState_CompleteCopyWithImpl(this._self, this._then);
+
+  final ImportIdentityState_Complete _self;
+  final $Res Function(ImportIdentityState_Complete) _then;
+
   /// Create a copy of ImportIdentityState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ImportIdentityState_CompleteImplCopyWith<
-          _$ImportIdentityState_CompleteImpl>
-      get copyWith => __$$ImportIdentityState_CompleteImplCopyWithImpl<
-          _$ImportIdentityState_CompleteImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(UuidValue field0) initiated,
-    required TResult Function(UuidValue field0) complete,
+  $Res call({
+    Object? field0 = null,
   }) {
-    return complete(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(UuidValue field0)? initiated,
-    TResult? Function(UuidValue field0)? complete,
-  }) {
-    return complete?.call(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(UuidValue field0)? initiated,
-    TResult Function(UuidValue field0)? complete,
-    required TResult orElse(),
-  }) {
-    if (complete != null) {
-      return complete(field0);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(ImportIdentityState_Initiated value) initiated,
-    required TResult Function(ImportIdentityState_Complete value) complete,
-  }) {
-    return complete(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(ImportIdentityState_Initiated value)? initiated,
-    TResult? Function(ImportIdentityState_Complete value)? complete,
-  }) {
-    return complete?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(ImportIdentityState_Initiated value)? initiated,
-    TResult Function(ImportIdentityState_Complete value)? complete,
-    required TResult orElse(),
-  }) {
-    if (complete != null) {
-      return complete(this);
-    }
-    return orElse();
+    return _then(ImportIdentityState_Complete(
+      null == field0
+          ? _self.field0
+          : field0 // ignore: cast_nullable_to_non_nullable
+              as UuidValue,
+    ));
   }
 }
 
-abstract class ImportIdentityState_Complete extends ImportIdentityState {
-  const factory ImportIdentityState_Complete(final UuidValue field0) =
-      _$ImportIdentityState_CompleteImpl;
-  const ImportIdentityState_Complete._() : super._();
-
-  @override
-  UuidValue get field0;
-
-  /// Create a copy of ImportIdentityState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ImportIdentityState_CompleteImplCopyWith<
-          _$ImportIdentityState_CompleteImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
+// dart format on

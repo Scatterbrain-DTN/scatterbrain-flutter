@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,101 +9,262 @@ part of 'mirror.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$IpAddr {
-  RustOpaqueInterface get field0 => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Ipv4Addr field0) v4,
-    required TResult Function(Ipv6Addr field0) v6,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Ipv4Addr field0)? v4,
-    TResult? Function(Ipv6Addr field0)? v6,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Ipv4Addr field0)? v4,
-    TResult Function(Ipv6Addr field0)? v6,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(IpAddr_V4 value) v4,
-    required TResult Function(IpAddr_V6 value) v6,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(IpAddr_V4 value)? v4,
-    TResult? Function(IpAddr_V6 value)? v6,
-  }) =>
-      throw _privateConstructorUsedError;
+  RustOpaqueInterface get field0;
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is IpAddr &&
+            (identical(other.field0, field0) || other.field0 == field0));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, field0);
+
+  @override
+  String toString() {
+    return 'IpAddr(field0: $field0)';
+  }
+}
+
+/// @nodoc
+class $IpAddrCopyWith<$Res> {
+  $IpAddrCopyWith(IpAddr _, $Res Function(IpAddr) __);
+}
+
+/// Adds pattern-matching-related methods to [IpAddr].
+extension IpAddrPatterns on IpAddr {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(IpAddr_V4 value)? v4,
     TResult Function(IpAddr_V6 value)? v6,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case IpAddr_V4() when v4 != null:
+        return v4(_that);
+      case IpAddr_V6() when v6 != null:
+        return v6(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(IpAddr_V4 value) v4,
+    required TResult Function(IpAddr_V6 value) v6,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case IpAddr_V4():
+        return v4(_that);
+      case IpAddr_V6():
+        return v6(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(IpAddr_V4 value)? v4,
+    TResult? Function(IpAddr_V6 value)? v6,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case IpAddr_V4() when v4 != null:
+        return v4(_that);
+      case IpAddr_V6() when v6 != null:
+        return v6(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Ipv4Addr field0)? v4,
+    TResult Function(Ipv6Addr field0)? v6,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case IpAddr_V4() when v4 != null:
+        return v4(_that.field0);
+      case IpAddr_V6() when v6 != null:
+        return v6(_that.field0);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Ipv4Addr field0) v4,
+    required TResult Function(Ipv6Addr field0) v6,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case IpAddr_V4():
+        return v4(_that.field0);
+      case IpAddr_V6():
+        return v6(_that.field0);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Ipv4Addr field0)? v4,
+    TResult? Function(Ipv6Addr field0)? v6,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case IpAddr_V4() when v4 != null:
+        return v4(_that.field0);
+      case IpAddr_V6() when v6 != null:
+        return v6(_that.field0);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $IpAddrCopyWith<$Res> {
-  factory $IpAddrCopyWith(IpAddr value, $Res Function(IpAddr) then) =
-      _$IpAddrCopyWithImpl<$Res, IpAddr>;
-}
 
-/// @nodoc
-class _$IpAddrCopyWithImpl<$Res, $Val extends IpAddr>
-    implements $IpAddrCopyWith<$Res> {
-  _$IpAddrCopyWithImpl(this._value, this._then);
+class IpAddr_V4 extends IpAddr {
+  const IpAddr_V4(this.field0) : super._();
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  @override
+  final Ipv4Addr field0;
 
   /// Create a copy of IpAddr
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IpAddr_V4CopyWith<IpAddr_V4> get copyWith =>
+      _$IpAddr_V4CopyWithImpl<IpAddr_V4>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is IpAddr_V4 &&
+            (identical(other.field0, field0) || other.field0 == field0));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, field0);
+
+  @override
+  String toString() {
+    return 'IpAddr.v4(field0: $field0)';
+  }
 }
 
 /// @nodoc
-abstract class _$$IpAddr_V4ImplCopyWith<$Res> {
-  factory _$$IpAddr_V4ImplCopyWith(
-          _$IpAddr_V4Impl value, $Res Function(_$IpAddr_V4Impl) then) =
-      __$$IpAddr_V4ImplCopyWithImpl<$Res>;
+abstract mixin class $IpAddr_V4CopyWith<$Res> implements $IpAddrCopyWith<$Res> {
+  factory $IpAddr_V4CopyWith(IpAddr_V4 value, $Res Function(IpAddr_V4) _then) =
+      _$IpAddr_V4CopyWithImpl;
   @useResult
   $Res call({Ipv4Addr field0});
 }
 
 /// @nodoc
-class __$$IpAddr_V4ImplCopyWithImpl<$Res>
-    extends _$IpAddrCopyWithImpl<$Res, _$IpAddr_V4Impl>
-    implements _$$IpAddr_V4ImplCopyWith<$Res> {
-  __$$IpAddr_V4ImplCopyWithImpl(
-      _$IpAddr_V4Impl _value, $Res Function(_$IpAddr_V4Impl) _then)
-      : super(_value, _then);
+class _$IpAddr_V4CopyWithImpl<$Res> implements $IpAddr_V4CopyWith<$Res> {
+  _$IpAddr_V4CopyWithImpl(this._self, this._then);
+
+  final IpAddr_V4 _self;
+  final $Res Function(IpAddr_V4) _then;
 
   /// Create a copy of IpAddr
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? field0 = null,
   }) {
-    return _then(_$IpAddr_V4Impl(
+    return _then(IpAddr_V4(
       null == field0
-          ? _value.field0
+          ? _self.field0
           : field0 // ignore: cast_nullable_to_non_nullable
               as Ipv4Addr,
     ));
@@ -112,251 +273,64 @@ class __$$IpAddr_V4ImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$IpAddr_V4Impl extends IpAddr_V4 {
-  const _$IpAddr_V4Impl(this.field0) : super._();
+class IpAddr_V6 extends IpAddr {
+  const IpAddr_V6(this.field0) : super._();
 
   @override
-  final Ipv4Addr field0;
+  final Ipv6Addr field0;
 
-  @override
-  String toString() {
-    return 'IpAddr.v4(field0: $field0)';
-  }
+  /// Create a copy of IpAddr
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IpAddr_V6CopyWith<IpAddr_V6> get copyWith =>
+      _$IpAddr_V6CopyWithImpl<IpAddr_V6>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IpAddr_V4Impl &&
+            other is IpAddr_V6 &&
             (identical(other.field0, field0) || other.field0 == field0));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, field0);
 
-  /// Create a copy of IpAddr
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$IpAddr_V4ImplCopyWith<_$IpAddr_V4Impl> get copyWith =>
-      __$$IpAddr_V4ImplCopyWithImpl<_$IpAddr_V4Impl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Ipv4Addr field0) v4,
-    required TResult Function(Ipv6Addr field0) v6,
-  }) {
-    return v4(field0);
+  String toString() {
+    return 'IpAddr.v6(field0: $field0)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Ipv4Addr field0)? v4,
-    TResult? Function(Ipv6Addr field0)? v6,
-  }) {
-    return v4?.call(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Ipv4Addr field0)? v4,
-    TResult Function(Ipv6Addr field0)? v6,
-    required TResult orElse(),
-  }) {
-    if (v4 != null) {
-      return v4(field0);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(IpAddr_V4 value) v4,
-    required TResult Function(IpAddr_V6 value) v6,
-  }) {
-    return v4(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(IpAddr_V4 value)? v4,
-    TResult? Function(IpAddr_V6 value)? v6,
-  }) {
-    return v4?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(IpAddr_V4 value)? v4,
-    TResult Function(IpAddr_V6 value)? v6,
-    required TResult orElse(),
-  }) {
-    if (v4 != null) {
-      return v4(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class IpAddr_V4 extends IpAddr {
-  const factory IpAddr_V4(final Ipv4Addr field0) = _$IpAddr_V4Impl;
-  const IpAddr_V4._() : super._();
-
-  @override
-  Ipv4Addr get field0;
-
-  /// Create a copy of IpAddr
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$IpAddr_V4ImplCopyWith<_$IpAddr_V4Impl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$IpAddr_V6ImplCopyWith<$Res> {
-  factory _$$IpAddr_V6ImplCopyWith(
-          _$IpAddr_V6Impl value, $Res Function(_$IpAddr_V6Impl) then) =
-      __$$IpAddr_V6ImplCopyWithImpl<$Res>;
+abstract mixin class $IpAddr_V6CopyWith<$Res> implements $IpAddrCopyWith<$Res> {
+  factory $IpAddr_V6CopyWith(IpAddr_V6 value, $Res Function(IpAddr_V6) _then) =
+      _$IpAddr_V6CopyWithImpl;
   @useResult
   $Res call({Ipv6Addr field0});
 }
 
 /// @nodoc
-class __$$IpAddr_V6ImplCopyWithImpl<$Res>
-    extends _$IpAddrCopyWithImpl<$Res, _$IpAddr_V6Impl>
-    implements _$$IpAddr_V6ImplCopyWith<$Res> {
-  __$$IpAddr_V6ImplCopyWithImpl(
-      _$IpAddr_V6Impl _value, $Res Function(_$IpAddr_V6Impl) _then)
-      : super(_value, _then);
+class _$IpAddr_V6CopyWithImpl<$Res> implements $IpAddr_V6CopyWith<$Res> {
+  _$IpAddr_V6CopyWithImpl(this._self, this._then);
+
+  final IpAddr_V6 _self;
+  final $Res Function(IpAddr_V6) _then;
 
   /// Create a copy of IpAddr
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? field0 = null,
   }) {
-    return _then(_$IpAddr_V6Impl(
+    return _then(IpAddr_V6(
       null == field0
-          ? _value.field0
+          ? _self.field0
           : field0 // ignore: cast_nullable_to_non_nullable
               as Ipv6Addr,
     ));
   }
 }
 
-/// @nodoc
-
-class _$IpAddr_V6Impl extends IpAddr_V6 {
-  const _$IpAddr_V6Impl(this.field0) : super._();
-
-  @override
-  final Ipv6Addr field0;
-
-  @override
-  String toString() {
-    return 'IpAddr.v6(field0: $field0)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$IpAddr_V6Impl &&
-            (identical(other.field0, field0) || other.field0 == field0));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, field0);
-
-  /// Create a copy of IpAddr
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IpAddr_V6ImplCopyWith<_$IpAddr_V6Impl> get copyWith =>
-      __$$IpAddr_V6ImplCopyWithImpl<_$IpAddr_V6Impl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Ipv4Addr field0) v4,
-    required TResult Function(Ipv6Addr field0) v6,
-  }) {
-    return v6(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Ipv4Addr field0)? v4,
-    TResult? Function(Ipv6Addr field0)? v6,
-  }) {
-    return v6?.call(field0);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Ipv4Addr field0)? v4,
-    TResult Function(Ipv6Addr field0)? v6,
-    required TResult orElse(),
-  }) {
-    if (v6 != null) {
-      return v6(field0);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(IpAddr_V4 value) v4,
-    required TResult Function(IpAddr_V6 value) v6,
-  }) {
-    return v6(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(IpAddr_V4 value)? v4,
-    TResult? Function(IpAddr_V6 value)? v6,
-  }) {
-    return v6?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(IpAddr_V4 value)? v4,
-    TResult Function(IpAddr_V6 value)? v6,
-    required TResult orElse(),
-  }) {
-    if (v6 != null) {
-      return v6(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class IpAddr_V6 extends IpAddr {
-  const factory IpAddr_V6(final Ipv6Addr field0) = _$IpAddr_V6Impl;
-  const IpAddr_V6._() : super._();
-
-  @override
-  Ipv6Addr get field0;
-
-  /// Create a copy of IpAddr
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$IpAddr_V6ImplCopyWith<_$IpAddr_V6Impl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on
